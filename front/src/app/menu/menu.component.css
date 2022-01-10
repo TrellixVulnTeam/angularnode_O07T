@@ -1,0 +1,66 @@
+main{
+    display: block;
+    width: 100%;
+    background-color: #EFEFEF;
+}
+.container{
+    background-color: #EFEFEF;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+}
+.searchdiv{
+    display: flex;
+}
+.searchdiv input{
+    width: 280px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-left: 10px;
+}
+.imglupa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #783B98;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.imglupa:hover{
+    cursor: pointer;
+    background-color: #8c0fcf;
+    transition: 0.3s;
+}
+.imglupa img{
+    width: 25px;
+    height: 25px;
+}
+.categorias select{
+    text-align: center;
+    align-items: center;
+}
+.categorias select, .buttonnovo button{
+    width: 150px;
+    height: 40px;
+    font-size: 1em;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(109, 109, 109);
+}
+.categorias button:hover{
+    cursor: pointer;
+    background-color: #f4f800;
+    transition: 0.3s;
+}
+.buttonnovo button:hover{
+    cursor: pointer;
+    background-color: #4edb4e;
+    transition: 0.3s;
+}

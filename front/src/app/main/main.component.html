@@ -1,0 +1,32 @@
+<main>
+    <div class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Categoria</th>
+                <th>Nome</th>
+                <th>Cor</th>
+                <th>partNumber</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let row of dispositivos'>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td class="tdacoes">
+                    <a href="">
+                        <img src="../../assets/pencil.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="../../assets/trash.png" alt="">
+                    </a>
+                </td>
+
+            </tr>
+        </tbody>
+    </div>
+</main>

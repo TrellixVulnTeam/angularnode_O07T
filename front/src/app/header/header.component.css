@@ -1,0 +1,41 @@
+nav{
+    width: 100%;
+    min-height: 60px;
+    background-color: #783B98;
+    display: flex;
+    justify-content: space-between;
+}
+.user img{
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #ebcc76;
+}
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user p{
+    margin-left: 5px;
+    color: #FFF;
+}
+.logo{
+    margin-left: 50px;
+    width: 60px;
+    height: 60px;
+}
+.sino{
+    width: 30px;
+    margin-right: 10px;
+}
+.sino:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.usuario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
