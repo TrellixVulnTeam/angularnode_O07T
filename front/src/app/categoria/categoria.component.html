@@ -1,9 +1,30 @@
 <headercomponent></headercomponent>
 <menu style="margin: 0;padding: 0;"></menu>
-<header>
-    <h2>
-        Categorias
-    </h2>
-
-</header>
+    <main>
+        <div class="table">
+            <h3>Categorias Cadastradas</h3>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let row of categorias'>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td class="tdacoes">
+                        <a href="">
+                            <img src="../../assets/pencil.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="../../assets/trash.png" alt="">
+                        </a>
+                    </td>
+    
+                </tr>
+            </tbody>
+        </div>
+    </main>
 <footer></footer>

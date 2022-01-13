@@ -1,12 +1,12 @@
 nav{
     width: 100%;
     min-height: 60px;
-    background-color: #783B98;
+    background-color: #4b1966;
     display: flex;
     justify-content: space-between;
 }
 .user img{
-    width: 60px;
+    width: 45px;
     border-radius: 50%;
     border: 2px solid #ebcc76;
 }
@@ -21,8 +21,16 @@ nav{
 }
 .logo{
     margin-left: 50px;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    margin-top: 5px;
+}
+
+.logo:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.1s;
 }
 .sino{
     width: 30px;
