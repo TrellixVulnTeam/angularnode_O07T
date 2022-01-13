@@ -37,3 +37,21 @@ tr td{
     justify-content: space-evenly;
     align-items: center;
 }
+.headerdispositivos button{
+    width: 150px;
+    height: 40px;
+    font-size: 1em;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(109, 109, 109);
+}
+.headerdispositivos button:hover{
+    cursor: pointer;
+    background-color: #f4f800;
+    transition: 0.3s;
+}
+.headerdispositivos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -2,7 +2,14 @@
 <menu style="margin: 0;padding: 0;"></menu>
     <main>
         <div class="table">
-            <h3>Categorias Cadastradas</h3>
+            <div class="headermenucategoria">
+                <h3>Categorias Cadastradas</h3>
+                <a [routerLink]="['/novacategoria']">
+                    <button>
+                        Adicionar Categoria
+                    </button>
+                </a>
+            </div>
             <thead>
                 <tr>
                     <th>ID</th>

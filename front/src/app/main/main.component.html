@@ -1,6 +1,12 @@
 <main>
     <div class="table">
-        <h3>Dispositivos Cadastrados</h3>
+        <div class="headerdispositivos">
+            <h3>Dispositivos Cadastrados</h3>
+            <a [routerLink]="['/novodispositivo']">
+                <button>Novo dispositivo</button>
+            </a>
+        </div>
+
         <thead>
             <tr>
                 <th>ID</th>

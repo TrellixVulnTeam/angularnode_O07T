@@ -10,6 +10,7 @@ import { MenuComponent } from './menu/menu.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { HomeComponent } from './home/home.component';
 import { NovodispositivoComponent } from './novodispositivo/novodispositivo.component';
+import { NovacategoriaComponent } from './novacategoria/novacategoria.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NovodispositivoComponent } from './novodispositivo/novodispositivo.comp
     MenuComponent,
     CategoriaComponent,
     HomeComponent,
-    NovodispositivoComponent
+    NovodispositivoComponent,
+    NovacategoriaComponent
   ],
   imports: [
     BrowserModule,
