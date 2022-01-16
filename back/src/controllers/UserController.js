@@ -1,30 +1,102 @@
-const connection = require('../database/connection');
-
+const { response } = require('express');
+const connection = require('../database/connection')
 const responseModel = {
-    success:false,
+    success: false,
     data: [],
-    error:[]
+    error: []
 }
-
 module.exports = {
 
-    async create(req, res){
-        const response = {...responseModel}
-
-        const { username, password} = req.body;
-
+    async create(req,res){
+        const{data}  = req.body;
         const [, affectRows] = await connection.query(
-            `INSERT INTO categorias VALUES (DEFAULT, '${namecategoria}' ,NOW(), NOW());`
+            `
+            INSERT INTO category VALUES(DEFAULT,'${namecategory}', NOW(), NOW());
+            INSERT INTO device VALUES(DEFAULT,'${namedevice}','${color}','${partnumber}','${idcategory}', NOW(), NOW());
+            `
         )
+        response.success = affectRows > 0
+        return res.json(response)
+        
+    },
+    async findAllDevice(req,res){
+        const{data}  = req.body;
         const [, affectRows] = await connection.query(
-            `INSERT INTO dispositivos VALUES (DEFAULT, '${namedispositivo}','${cor}','${partnumber}','${iddispositivo}' ,NOW(), NOW());`
+            `
+            SELECT * FROM device;
+            `
         )
-        response.success = affectRows > 0 
+        response.success = affectRows > 0
         return res.json(response)
     },
-    async login(req, res){
-        const response = {...responseModel}
-
+    async findAllCategory(req,res){
+        const{data}  = req.body;
+        const [, affectRows] = await connection.query(
+            `
+            SELECT * FROM category;
+            `
+        )
+        response.success = affectRows > 0
+        return res.json(response)
+    },
+    async findOneDevice(req,res){
+        const{data}  = req.body;
+        const [, affectRows] = await connection.query(
+            `
+            SELECT * FROM device WHERE id=${id};
+            `
+        )
+        response.success = affectRows > 0
+        return res.json(response)
+    },
+    async findOneCategory(req,res){
+        const{data}  = req.body;
+        const [, affectRows] = await connection.query(
+            `
+            SELECT * FROM category WHERE id=${id};
+            `
+        )
+        response.success = affectRows > 0
+        return res.json(response)
+    },
+    async insertDevice(req,res){
+        const{data}  = req.body;
+        const [, affectRows] = await connection.query(
+            `
+            INSERT INTO device (id, namedevice, color, partnumber, idcategory, create_at, updated_at) VALUES (${id}, ${namedevice}, ${color}, ${partnumber}, ${idcategory}, ${create_at}, ${updated_at});
+            `
+        )
+        response.success = affectRows > 0
+        return res.json(response)
+    },
+    async insertCategory(req,res){
+        const{data}  = req.body;
+        const [, affectRows] = await connection.query(
+            `
+            INSERT INTO category (id, namecategory, create_at, updated_at) VALUES (${id}, ${namecategory}, ${create_at}, ${updated_at});
+            `
+        )
+        response.success = affectRows > 0
+        return res.json(response)
+    },
+    async deleteDevice(req,res){
+        const{data}  = req.body;
+        const [, affectRows] = await connection.query(
+            `
+            DELETE FROM device WHERE id = ${id};
+            `
+        )
+        response.success = affectRows > 0
+        return res.json(response)
+    },
+    async deleteCategory(req,res){
+        const{data}  = req.body;
+        const [, affectRows] = await connection.query(
+            `
+            DELETE FROM category WHERE id = ${id};
+            `
+        )
+        response.success = affectRows > 0
         return res.json(response)
     }
 }

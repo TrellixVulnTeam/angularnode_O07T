@@ -11,7 +11,8 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { HomeComponent } from './home/home.component';
 import { NovodispositivoComponent } from './novodispositivo/novodispositivo.component';
 import { NovacategoriaComponent } from './novacategoria/novacategoria.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { CategoriaService} from './categoria.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,10 +26,13 @@ import { NovacategoriaComponent } from './novacategoria/novacategoria.component'
     NovacategoriaComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    CategoriaService
+  ],
+  bootstrap: [AppComponent, HttpClientModule]
 })
 export class AppModule { }
