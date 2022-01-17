@@ -81,7 +81,7 @@ delete them.
 
 - [X] Backend must be implemented in NodeJS (version 10 or above).
  
-- [] [Automated tests on the backend is not mandatory but is a PLUS.]
+- [ ] [Automated tests on the backend is not mandatory but is a PLUS.]
 
 - [X] Devices and Categories MUST be persisted on a MySQL database.
 
