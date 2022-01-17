@@ -1,0 +1,6 @@
+//script para montar o banco
+
+CREATE DATABASE dbchallenge;
+USE dbchallenge;
+CREATE TABLE category (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, namecategory VARCHAR(128) NOT NULL, create_at DATETIME, updated_at DATETIME)
+CREATE TABLE device (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, namedevice VARCHAR(128) NOT NULL, color VARCHAR(16) NOT NULL,  partnumber int NOT NULL, idcategory INT NOT NULL, create_at DATETIME, updated_at DATETIME)

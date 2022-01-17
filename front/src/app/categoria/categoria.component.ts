@@ -9,11 +9,10 @@ import { CategoriaService } from '../categoria.service';
 })
 export class CategoriaComponent implements OnInit {
   categoriasArray: Array<any> = new Array();
-  categorias: Array<any> = new Array();
-  // categorias=[
-  //   ["1","nometeste"],
-  //   ["2","nometeste"],
-  //   ["3","nometeste"]];
+  categorias=[
+    ["1","nometeste"],
+    ["2","nometeste"],
+    ["3","nometeste"]];
   constructor(
     private categoriaService: CategoriaService
   ) { }
@@ -24,7 +23,7 @@ export class CategoriaComponent implements OnInit {
   listarAlunos(){
     console.log('ASAAAAA')
     this.categoriaService.listarCategorias().subscribe(categorys =>{
-      categorys = this.categorias;
+      // categorys = this.categorias;
     },err =>{
       console.log('Erro ao listar as categorias', err)
     })
