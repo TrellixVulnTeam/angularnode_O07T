@@ -7,9 +7,9 @@ const UserController = require('./controllers/UserController')
 
 router.post('/create',  UserController.create)
 
-router.post('/findAllDevice',  UserController.findAllDevice)
+router.get('/findAllDevice',  UserController.findAllDevice)
 
-router.post('/findAllCategory',  UserController.findAllCategory)
+router.get('/findAllCategory',  UserController.findAllCategory)
 
 router.post('/findOneDevice',  UserController.findOneDevice)
 
